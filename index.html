@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mira Vista</title>
+    <title>Mira Vista — See clearly, both ways</title>
     <meta
       name="description"
-      content="Mira Vista is a calm digital home for crafted spaces, thoughtful stays, and future-facing hospitality."
+      content="Mira Vista is a pair of calm daily apps for two kinds of seeing. Mira turns inward — a mirror for your own thoughts. Vista turns outward — a lens on the world."
     />
-    <meta property="og:title" content="Mira Vista" />
+    <meta property="og:title" content="Mira Vista — See clearly, both ways" />
     <meta
       property="og:description"
-      content="A new Mira Vista website is taking shape."
+      content="Two quiet daily apps: Mira (look inward and reflect) and Vista (understand the world). 看清自己，看懂世界."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mira-vista.com" />
@@ -30,79 +30,95 @@
         <span>Mira Vista</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#apps">Apps</a>
         <a href="#vision">Vision</a>
-        <a href="#places">Places</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero" aria-label="Mira Vista introduction">
-        <img
-          class="hero-image"
-          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=82"
-          alt="A quiet hillside residence surrounded by trees"
-        />
-        <div class="hero-shade" aria-hidden="true"></div>
+      <section class="hero hero--plain" aria-label="Mira Vista introduction">
         <div class="hero-content">
-          <p class="eyebrow">Opening a clearer view</p>
-          <h1>Mira Vista</h1>
+          <p class="eyebrow">Two kinds of seeing</p>
+          <h1>See clearly,<br />both ways.</h1>
           <p class="hero-copy">
-            A new digital home is coming soon, shaped around calm spaces,
-            generous light, and the slower rhythm of a memorable stay.
+            Mira Vista is a pair of quiet daily apps.
+            <strong>Mira</strong> turns inward — a mirror for your own thoughts.
+            <strong>Vista</strong> turns outward — a lens on the world.
+            Together: 看清自己，看懂世界.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="#contact">Get updates</a>
-            <a class="button secondary" href="#vision">See the direction</a>
+            <a class="button primary" href="#apps">Meet the apps</a>
+            <a class="button secondary" href="#contact">Get updates</a>
           </div>
         </div>
+      </section>
+
+      <section class="apps" id="apps" aria-label="The apps">
+        <article class="app-card app-card--mira">
+          <img
+            class="app-icon"
+            src="assets/mira-icon.png"
+            alt="Mira app icon"
+            width="88"
+            height="88"
+          />
+          <p class="app-kicker">Look inward</p>
+          <h2>Mira <span>· 日省</span></h2>
+          <p>
+            A reflective companion that asks you better questions and learns who
+            you are over time. Not a feed, not advice — a calm mirror that helps
+            you find yourself in the noise.
+          </p>
+          <p class="app-status">Coming to the App Store</p>
+        </article>
+
+        <article class="app-card app-card--vista">
+          <img
+            class="app-icon"
+            src="assets/vista-icon.png"
+            alt="Vista app icon"
+            width="88"
+            height="88"
+          />
+          <p class="app-kicker">Look outward</p>
+          <h2>Vista <span>· 日知</span></h2>
+          <p>
+            Understand the news that actually matters — what happened, why it
+            matters, and how to think about it. A daily way to train your read
+            on the world.
+          </p>
+          <p class="app-status">Coming soon</p>
+        </article>
       </section>
 
       <section class="intro-band" id="vision">
         <div class="section-kicker">Vision</div>
         <div class="intro-grid">
-          <h2>Designed for stillness, arrival, and a better kind of pause.</h2>
+          <h2>Please don't stop thinking.</h2>
           <p>
-            This first version is a placeholder while the full Mira Vista site
-            is being built. The structure is already ready for Cloudflare Pages,
-            custom domains, and future content.
+            Most apps want your attention. Mira Vista wants your clarity. Two
+            small daily practices — one turned toward yourself, one toward the
+            world — built to be calm, honest, and easy to keep. No outrage feed,
+            no streak guilt, no noise. Just a clearer view, both ways.
           </p>
         </div>
-      </section>
-
-      <section class="feature-strip" id="places" aria-label="Highlights">
-        <article>
-          <span>01</span>
-          <h3>Warm First Impression</h3>
-          <p>
-            A strong brand landing section that makes the domain feel active
-            while the real content is still in progress.
-          </p>
-        </article>
-        <article>
-          <span>02</span>
-          <h3>Cloudflare Ready</h3>
-          <p>
-            Plain HTML, CSS, and JavaScript means no build system, no package
-            install, and fewer deployment surprises.
-          </p>
-        </article>
-        <article>
-          <span>03</span>
-          <h3>Easy to Replace</h3>
-          <p>
-            Swap the image, edit the words, or add pages later without changing
-            the hosting setup.
-          </p>
-        </article>
       </section>
 
       <section class="contact-section" id="contact">
         <div>
           <p class="section-kicker">Contact</p>
-          <h2>Start simple. Improve as the idea gets sharper.</h2>
+          <h2>Stay in the loop.</h2>
+          <p>
+            Questions, press, or early access — write to
+            <a href="mailto:hello@mira-vista.com">hello@mira-vista.com</a>.
+          </p>
         </div>
-        <form class="notify-form" action="mailto:hello@mira-vista.com" method="post">
+        <form
+          class="notify-form"
+          action="mailto:hello@mira-vista.com"
+          method="post"
+        >
           <label for="email">Email address</label>
           <div class="field-row">
             <input
@@ -115,8 +131,7 @@
             <button type="submit">Notify me</button>
           </div>
           <p class="form-note">
-            This temporary form opens your email app. A real signup form can be
-            connected later.
+            This opens your email app. A real signup form can be connected later.
           </p>
         </form>
       </section>
@@ -124,7 +139,7 @@
 
     <footer class="site-footer">
       <span>Mira Vista</span>
-      <span>mira-vista.com</span>
+      <span>mira-vista.com · hello@mira-vista.com</span>
     </footer>
 
     <script src="script.js"></script>
