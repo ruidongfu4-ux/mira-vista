@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mira Vista</title>
+    <meta
+      name="description"
+      content="Mira Vista is a calm digital home for crafted spaces, thoughtful stays, and future-facing hospitality."
+    />
+    <meta property="og:title" content="Mira Vista" />
+    <meta
+      property="og:description"
+      content="A new Mira Vista website is taking shape."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://mira-vista.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Mira Vista home">
+        <span class="brand-mark" aria-hidden="true">MV</span>
+        <span>Mira Vista</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#vision">Vision</a>
+        <a href="#places">Places</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-label="Mira Vista introduction">
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1800&q=82"
+          alt="A quiet hillside residence surrounded by trees"
+        />
+        <div class="hero-shade" aria-hidden="true"></div>
+        <div class="hero-content">
+          <p class="eyebrow">Opening a clearer view</p>
+          <h1>Mira Vista</h1>
+          <p class="hero-copy">
+            A new digital home is coming soon, shaped around calm spaces,
+            generous light, and the slower rhythm of a memorable stay.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#contact">Get updates</a>
+            <a class="button secondary" href="#vision">See the direction</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="intro-band" id="vision">
+        <div class="section-kicker">Vision</div>
+        <div class="intro-grid">
+          <h2>Designed for stillness, arrival, and a better kind of pause.</h2>
+          <p>
+            This first version is a placeholder while the full Mira Vista site
+            is being built. The structure is already ready for Cloudflare Pages,
+            custom domains, and future content.
+          </p>
+        </div>
+      </section>
+
+      <section class="feature-strip" id="places" aria-label="Highlights">
+        <article>
+          <span>01</span>
+          <h3>Warm First Impression</h3>
+          <p>
+            A strong brand landing section that makes the domain feel active
+            while the real content is still in progress.
+          </p>
+        </article>
+        <article>
+          <span>02</span>
+          <h3>Cloudflare Ready</h3>
+          <p>
+            Plain HTML, CSS, and JavaScript means no build system, no package
+            install, and fewer deployment surprises.
+          </p>
+        </article>
+        <article>
+          <span>03</span>
+          <h3>Easy to Replace</h3>
+          <p>
+            Swap the image, edit the words, or add pages later without changing
+            the hosting setup.
+          </p>
+        </article>
+      </section>
+
+      <section class="contact-section" id="contact">
+        <div>
+          <p class="section-kicker">Contact</p>
+          <h2>Start simple. Improve as the idea gets sharper.</h2>
+        </div>
+        <form class="notify-form" action="mailto:hello@mira-vista.com" method="post">
+          <label for="email">Email address</label>
+          <div class="field-row">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="you@example.com"
+              autocomplete="email"
+            />
+            <button type="submit">Notify me</button>
+          </div>
+          <p class="form-note">
+            This temporary form opens your email app. A real signup form can be
+            connected later.
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Mira Vista</span>
+      <span>mira-vista.com</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
