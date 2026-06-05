@@ -451,3 +451,101 @@ a {
 }
 
 .app-icon { border: 1px solid rgba(23, 35, 31, 0.07); }
+
+/* ===== Legal pages (privacy / terms) ===== */
+.legal {
+  margin: 0 auto;
+  max-width: 740px;
+  padding: 130px 26px 80px;
+  font-size: 1.02rem;
+  line-height: 1.78;
+}
+.legal[data-brand="mira"]  { --brand: #C9633F; }
+.legal[data-brand="vista"] { --brand: #3E6B7A; }
+
+.legal-eyebrow {
+  color: var(--brand);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  margin: 0 0 12px;
+  text-transform: uppercase;
+}
+.legal h1 {
+  font-family: "Fraunces", serif;
+  font-size: 3rem;
+  line-height: 1.05;
+  margin: 0 0 14px;
+}
+.legal-meta {
+  color: rgba(23, 35, 31, 0.6);
+  font-size: 0.92rem;
+  margin: 0 0 50px;
+}
+.legal-meta a,
+.legal a:not(.brand) {
+  color: var(--brand);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+  font-weight: 500;
+}
+.legal-meta a:hover,
+.legal a:not(.brand):hover { border-bottom-color: var(--brand); }
+.legal h2 {
+  font-family: "Fraunces", serif;
+  font-size: 1.65rem;
+  margin: 56px 0 14px;
+}
+.legal h3 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 28px 0 10px;
+}
+.legal p,
+.legal li { color: rgba(23, 35, 31, 0.86); }
+.legal ul { margin: 16px 0; padding-left: 1.4em; }
+.legal li { margin: 8px 0; }
+.legal strong { color: var(--ink); font-weight: 700; }
+.legal hr {
+  border: 0;
+  border-top: 1px solid rgba(23, 35, 31, 0.12);
+  margin: 48px 0;
+}
+.legal table {
+  border-collapse: collapse;
+  font-size: 0.94rem;
+  margin: 18px 0;
+  width: 100%;
+}
+.legal th,
+.legal td {
+  border: 1px solid rgba(23, 35, 31, 0.12);
+  padding: 10px 14px;
+  text-align: left;
+  vertical-align: top;
+}
+.legal th {
+  background: var(--mist);
+  font-weight: 700;
+}
+.legal-back {
+  border-top: 1px solid rgba(23, 35, 31, 0.12);
+  font-weight: 700;
+  margin-top: 56px;
+  padding-top: 24px;
+}
+.legal-back a { color: var(--brand); }
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-size: 0.88rem;
+}
+.footer-links a { color: rgba(23, 35, 31, 0.62); }
+.footer-links a:hover { color: var(--ink); }
+
+@media (max-width: 640px) {
+  .legal { padding: 110px 22px 60px; font-size: 0.98rem; }
+  .legal h1 { font-size: 2.2rem; }
+  .legal h2 { font-size: 1.35rem; }
+}

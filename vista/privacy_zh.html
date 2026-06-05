@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>日知 (Vista) — 隐私政策</title>
+    <meta name="description" content="日知如何处理你的数据。Local-first 设计。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="../" aria-label="Mira Vista home">
+        <span class="brand-mark" aria-hidden="true">MV</span>
+        <span>Mira Vista</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../#apps">Apps</a>
+        <a href="../#vision">Vision</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="legal" data-brand="vista">
+      <p class="legal-eyebrow">日知 · Vista</p>
+      <h1>隐私政策</h1>
+      <p class="legal-meta">
+        最后更新：2026 年 6 月 5 日 ·
+        <a href="privacy_en">English</a> ·
+        <a href="terms_zh">服务条款</a>
+      </p>
+
+      <p>
+        本隐私政策说明 <strong>日知</strong> App（"我们"、"本应用"）如何处理你的信息。日知按 <strong>local-first 哲学</strong>设计：你的阅读记录、答题历史和每日一问记录默认<strong>只存在你的设备上</strong>，除非你主动选择启用云端备份。
+      </p>
+
+      <h2>1. 一句话说清楚</h2>
+      <table>
+        <thead>
+          <tr><th>内容</th><th>存储位置</th><th>谁能读</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>新闻列表、阅读状态、答题历史、每日一问记录、App 设置</td><td><strong>仅你的设备</strong>（Drift / SQLite）</td><td>只有你</td></tr>
+          <tr><td>答题历史、每日一问记录、语言与提醒偏好</td><td><strong>仅在你于设置页主动开启云端备份后</strong>，同步到我们的云端；通过行级安全策略绑定到你的账号 ID</td><td>只有你（通过 Apple ID）</td></tr>
+          <tr><td>使用世界感知 / 新闻提问 / 每日一问时，当前问题、用户输入和相关新闻摘要</td><td><strong>实时发送</strong>给日知的 DeepSeek 后端代理生成回答，处理后丢弃</td><td>日知（仅传输不存储）+ DeepSeek（按其政策）</td></tr>
+          <tr><td>公共新闻缓存（标题、短摘要、来源链接、发布时间、分类、重要度、AI 分析卡片）</td><td>存放在我们的云端缓存中，<strong>不绑定任何用户身份</strong></td><td>App 内任何人可读（匿名只读）</td></tr>
+        </tbody>
+      </table>
+
+      <p>我们 <strong>不会</strong>：</p>
+      <ul>
+        <li>使用第三方追踪 SDK 跨 App 追踪你</li>
+        <li>把你的数据卖给广告商</li>
+        <li>用你的输入构建用户画像</li>
+        <li>在日知和日省之间或与任何其他 App 共享你的数据</li>
+        <li>把你的 AI 对话存储在我们的服务器上</li>
+      </ul>
+
+      <h2>2. 我们处理的信息</h2>
+
+      <h3>2.1 仅存于你设备本地的</h3>
+      <p>以下所有数据都仅存在你设备的 iOS App 沙箱里的 Drift (SQLite) 数据库中：</p>
+      <ul>
+        <li>新闻列表和阅读状态</li>
+        <li>答题历史（今日五问 + 单篇答题）</li>
+        <li>每日一问记录</li>
+        <li>提醒时间、App 语言、主题</li>
+        <li>从 Apple 缓存的订阅状态</li>
+      </ul>
+      <p>iOS 文件系统默认对 App 数据加密。</p>
+
+      <h3>2.2 Apple ID 登录与可选的云端备份</h3>
+      <p>
+        日知使用 <strong>Sign in with Apple</strong> 进行身份识别与订阅恢复。登录本身<strong>不会自动上传</strong>你的学习记录。
+      </p>
+      <p>
+        只有当你<strong>在设置页主动开启云端备份</strong>时，日知才会把以下内容同步到我们的 Supabase 数据库，以便重装或换设备后恢复：
+      </p>
+      <ul>
+        <li>答题历史</li>
+        <li>每日一问记录</li>
+        <li>语言与提醒偏好</li>
+      </ul>
+      <p>
+        每条云端记录都绑定到你的 Apple 账号 ID，并通过 Supabase 行级安全（RLS）策略限制为仅本账号可读写。你可以随时在设置页关闭云端备份或删除已同步的数据。
+      </p>
+
+      <h3>2.3 实时发送给 AI 服务商（DeepSeek）的</h3>
+      <p>
+        当你使用世界感知、对某条新闻提问或回答每日一问时，日知的后端（一个 Supabase Edge Function）会把以下内容发送给 <strong>DeepSeek 的 API</strong> 来生成回应：
+      </p>
+      <ul>
+        <li>当前的问题或提示</li>
+        <li>你写下的输入</li>
+        <li>相关新闻摘要（标题、短摘要）作为上下文</li>
+      </ul>
+      <p>
+        DeepSeek 的政策声明 API 内容<strong>不用于训练、不超出请求生命周期存储</strong>。我们无法绝对保证任何第三方在其政策之外的行为。
+      </p>
+      <p>
+        我们<strong>不在自己的服务器上存储</strong>你的 AI 输入或输出。日知后端只是设备和 DeepSeek 之间的无状态中转层，并启用基础的每小时频率限制以保护服务。
+      </p>
+      <p>App 内不再提供用户 API Key 输入。所有 AI 调用统一走日知的默认 DeepSeek 后端代理。</p>
+
+      <h3>2.4 公共新闻缓存</h3>
+      <p>
+        日知的新闻缓存（标题、短摘要、来源链接、发布时间、分类、重要度、AI 分析卡片）存储在我们的 Supabase 数据库中，用于让新安装的设备更快加载。
+      </p>
+      <p>
+        此缓存<strong>对 App 匿名只读公开</strong>，<strong>不绑定任何用户身份</strong>。它不包含你的阅读历史、答题记录或个人输入。
+      </p>
+
+      <h2>3. 我们的服务器</h2>
+      <p>我们使用 <strong>Supabase</strong>（部署在 AWS 上）运行：</p>
+      <ul>
+        <li>转发 AI 请求到 DeepSeek 的 Edge Function（内容不存储）</li>
+        <li>公共新闻缓存表（匿名只读）</li>
+        <li>可选的云端备份表（答题历史与设置），通过行级安全策略绑定到你的 Apple 账号 ID</li>
+      </ul>
+      <p>我们使用 <strong>DeepSeek</strong> 作为 AI 服务商。它们实时处理你的消息（按其政策不存储）。</p>
+      <p>未来版本可能切换或新增 AI 服务商（如 OpenAI、Anthropic）。如发生变更，本政策会同步更新。</p>
+
+      <h2>4. 追踪与广告</h2>
+      <p>
+        日知<strong>不使用</strong>第三方分析 SDK、广告网络或跨 App 追踪器。日知和日省<strong>不会</strong>互相共享数据——每个 App 的数据都保留在自己的范围内。
+      </p>
+
+      <h2>5. 儿童隐私</h2>
+      <p>日知不面向 13 岁以下用户。我们不会有意收集儿童数据。如你认为有儿童在使用本应用，请联系我们协助。</p>
+
+      <h2>6. 你的权利</h2>
+      <ul>
+        <li><strong>删除设备本地数据</strong>：删除 App — 所有本地数据立即且永久移除。</li>
+        <li><strong>删除云端备份数据</strong>：在设置页关闭云端备份，或使用"删除账号"选项移除所有绑定到你 Apple 账号的云端记录。</li>
+        <li><strong>不使用 AI 处理</strong>：只浏览新闻卡片不会向 AI 发送任何数据。如不想 AI 处理，请勿使用世界感知、新闻提问或每日一问。</li>
+        <li><strong>数据导出</strong>：发邮件联系我们 — 我们会按需导出你的云端备份记录（如有）。</li>
+      </ul>
+
+      <h2>7. 版权与内容</h2>
+      <p>
+        日知用于学习和认知训练，<strong>不</strong>提供新闻全文搬运服务。新闻卡片优先展示标题、短摘要、来源、发布时间、原创分析卡片以及原始来源链接。
+      </p>
+      <p>
+        应用不会主动抓取原网页全文。若 RSS 源本身提供较长内容，日知会尽量压缩为短摘要和上下文片段，详情应跳转原站阅读。
+      </p>
+      <p>新闻标题、摘要、图片或链接的权利归原发布方所有。权利方可以通过邮件提交标题、来源和处理诉求。</p>
+
+      <h2>8. 政策变更</h2>
+      <p>如果数据处理方式有重大变更，我们会：</p>
+      <ul>
+        <li>更新顶部日期</li>
+        <li>在 App 内下次启动时通知你</li>
+        <li>（涉及隐私破坏性变更时）请求你重新同意</li>
+      </ul>
+
+      <h2>9. 免责声明</h2>
+      <p>
+        日知提供 AI 生成的新闻分析作为学习辅助。AI 生成内容可能存在错误、遗漏或过度概括。涉及投资、医疗、法律、公共安全等重要事项时，应以原始来源和专业意见为准。
+      </p>
+
+      <h2>10. 联系方式</h2>
+      <p>涉及隐私问题、数据删除请求或其他事项：</p>
+      <ul>
+        <li>邮箱：<a href="mailto:hello@mira-vista.com">hello@mira-vista.com</a></li>
+      </ul>
+
+      <p class="legal-back"><a href="../">← 回到 Mira Vista</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <span>Mira Vista</span>
+      <span>mira-vista.com · hello@mira-vista.com</span>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="zh-Hans">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>日省 (Mira) — 隐私政策</title>
+    <meta name="description" content="日省如何处理你的数据。Local-first，承诺不是营销词。" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body>
+    <header class="site-header" data-header>
+      <a class="brand" href="../" aria-label="Mira Vista home">
+        <span class="brand-mark" aria-hidden="true">MV</span>
+        <span>Mira Vista</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="../#apps">Apps</a>
+        <a href="../#vision">Vision</a>
+        <a href="../#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="legal" data-brand="mira">
+      <p class="legal-eyebrow">日省 · Mira</p>
+      <h1>隐私政策</h1>
+      <p class="legal-meta">
+        最后更新：2026 年 5 月 31 日 ·
+        <a href="privacy_en">English</a> ·
+        <a href="terms_zh">服务条款</a>
+      </p>
+
+      <p>
+        本隐私政策说明 <strong>日省</strong> App（"我们"、"本应用"）如何处理你的信息。日省按
+        <strong>local-first 哲学</strong> 设计：你的自省内容<strong>永远只存在你的设备上</strong>，除了下面明确列出的窄通道之外，不进入任何服务器。
+      </p>
+
+      <h2>1. 一句话说清楚</h2>
+      <table>
+        <thead>
+          <tr><th>内容</th><th>存储位置</th><th>谁能读</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>你对反思问题的回答</td><td><strong>仅你的设备</strong>（SQLite）</td><td>只有你</td></tr>
+          <tr><td>你的人格档案、关键词、洞察历史</td><td><strong>仅你的设备</strong></td><td>只有你</td></tr>
+          <tr><td>通知时间、语言偏好</td><td><strong>仅你的设备</strong></td><td>只有你</td></tr>
+          <tr><td>日省给你出的问题、档案摘要、关键词、近期回答</td><td><strong>实时发送</strong>给我们的 AI 服务商（DeepSeek）以生成回应，按其政策处理后丢弃</td><td>日省（仅传输不存储）+ DeepSeek（按其政策）</td></tr>
+          <tr><td>你<strong>主动</strong>长按某个问题选「推荐到社区」时上传的问题文本</td><td>上传到我们的社区库，<strong>不关联你的身份</strong></td><td>其他日省用户（经我们审核后）</td></tr>
+        </tbody>
+      </table>
+
+      <p>我们 <strong>不会</strong>：</p>
+      <ul>
+        <li>运行任何追踪 SDK</li>
+        <li>把你的数据卖给广告商或第三方</li>
+        <li>要求账号、邮箱、手机号或任何身份标识</li>
+        <li>把你的自省记录存到任何服务器</li>
+      </ul>
+
+      <h2>2. 我们处理的信息</h2>
+
+      <h3>2.1 仅存于你设备本地的</h3>
+      <p>以下所有数据都仅存在你设备的 iOS 沙箱 SQLite 数据库中，<strong>不上传到任何服务器</strong>：</p>
+      <ul>
+        <li>你对自省题的回答</li>
+        <li>从你回答中生成的人格档案（Markdown）</li>
+        <li>AI 从你文字中提取的关键词</li>
+        <li>你的自省历史（sessions）</li>
+        <li>你的精选问题与实验</li>
+        <li>周/月总结</li>
+        <li>通知设置、App 语言偏好</li>
+      </ul>
+      <p>iOS 文件系统默认对 App 数据加密。</p>
+
+      <h3>2.2 实时发送给 AI 服务商（DeepSeek）的</h3>
+      <p>
+        当你点击需要 AI 处理的按钮（生成问题、分析回答、写总结、设计实验等）时，日省的后端（一个 Supabase Edge Function）会把必要的上下文发送给
+        <strong>DeepSeek 的 API</strong> 来计算结果。
+      </p>
+      <p>发送内容包括（视操作而定）：</p>
+      <ul>
+        <li>当前的反思问题</li>
+        <li>你写下的回答</li>
+        <li>你人格档案的截取片段（≤ 3000 字符）</li>
+        <li>你的高权重关键词（含定义）</li>
+        <li>近期 5 天 sessions 的摘要（已截断）</li>
+      </ul>
+      <p>
+        DeepSeek 的政策声明 API 内容<strong>不用于训练、不超出请求生命周期存储</strong>。我们无法绝对保证任何第三方在其政策之外的行为。
+      </p>
+      <p>
+        我们 <strong>不在自己的服务器上存储</strong> 这些内容。日省后端只是设备和 DeepSeek 之间的无状态中转层。
+      </p>
+
+      <h3>2.3 主动推荐到社区库的内容（仅当你显式选择时）</h3>
+      <p>当你长按一个问题、点「推荐到社区」时，以下内容会上传到我们的社区数据库：</p>
+      <ul>
+        <li>问题文本本身（<strong>AI 生成的问题</strong>，不是你的回答）</li>
+        <li>问题类型</li>
+        <li>AI 生成它的理由（<code>why_ask</code>，内部元数据）</li>
+        <li>时间戳</li>
+      </ul>
+      <p>我们 <strong>不会上传</strong>：</p>
+      <ul>
+        <li>你的回答</li>
+        <li>你的档案或关键词</li>
+        <li>你的设备 ID 或任何身份标识</li>
+        <li>任何把这条问题与你本人关联起来的信息</li>
+      </ul>
+      <p>
+        被推荐的问题进入待审核池。经过基础自动审核后（我们会拒绝含个人姓名、具体日期、金额、住址的问题），它们可能出现在其他用户的题目列表里，带有 "✦ Community" 标签。
+      </p>
+      <p>
+        你可以随时停止推荐新的问题。已经匿名提交的问题因系统的匿名性无法由用户单方撤回，但你可以发邮件告诉我们具体文本，我们会从社区池中删除。
+      </p>
+
+      <h2>3. 我们的服务器</h2>
+      <p>我们使用 <strong>Supabase</strong>（部署在 AWS 上）运行：</p>
+      <ul>
+        <li>转发请求到 DeepSeek 的 Edge Function</li>
+        <li>社区问题表（仅存按 §2.3 主动推荐的问题）</li>
+      </ul>
+      <p>
+        Supabase <strong>没有任何你的自省内容、档案、或使用模式的记录</strong>。社区表只包含 §2.3 描述的数据。
+      </p>
+      <p>我们使用 <strong>DeepSeek</strong> 作为 AI 服务商。它们实时处理你的消息（按其政策不存储）。</p>
+      <p>未来版本可能切换或新增 AI 服务商（如 OpenAI、Anthropic）。如发生变更，本政策会同步更新。</p>
+
+      <h2>4. 儿童隐私</h2>
+      <p>日省不面向 13 岁以下用户。我们不会有意收集儿童数据。如你认为有儿童在使用本应用，请联系我们协助。</p>
+
+      <h2>5. 你的权利</h2>
+      <p>由于你的所有自省记录都仅存在你的设备上：</p>
+      <ul>
+        <li><strong>删除全部数据</strong>：用设置 → 数据 → "重新开始 onboarding" 按钮，会清空设备上的所有数据。</li>
+        <li><strong>删除 App</strong>：立即且永久地清除所有数据。我们不保留任何副本。</li>
+        <li><strong>删除已推荐到社区的某条问题</strong>：发邮件告诉我们问题文本，我们会从池中移除。</li>
+        <li><strong>数据导出</strong>：你可以在档案页把人格档案以 Markdown 形式分享出去。</li>
+      </ul>
+      <p>
+        我们的服务器上没有你的数据，所以传统的"请求查看数据"、"请求删除数据"对你的自省记录不适用 — 它们一直就是你的，在你的设备上，没有别处。
+      </p>
+
+      <h2>6. 政策变更</h2>
+      <p>如果数据处理方式有重大变更，我们会：</p>
+      <ul>
+        <li>更新顶部日期</li>
+        <li>在 App 内下次启动时通知你</li>
+        <li>（涉及隐私破坏性变更时）请求你重新同意</li>
+      </ul>
+
+      <h2>7. 免责声明</h2>
+      <p>
+        日省是一个 <strong>自省与自我观察工具</strong>。它<strong>不是</strong>医疗器械、心理治疗 App、或专业心理咨询的替代品。AI 生成的洞察是自省的工具，不是诊断或治疗建议。
+      </p>
+      <p>如果你正在经历心理危机，请联系专业人员或心理援助热线。</p>
+
+      <h2>8. 联系方式</h2>
+      <p>涉及隐私问题、数据删除请求或其他事项：</p>
+      <ul>
+        <li>邮箱：<a href="mailto:hello@mira-vista.com">hello@mira-vista.com</a></li>
+      </ul>
+
+      <p class="legal-back"><a href="../">← 回到 Mira Vista</a></p>
+    </main>
+
+    <footer class="site-footer">
+      <span>Mira Vista</span>
+      <span>mira-vista.com · hello@mira-vista.com</span>
+    </footer>
+
+    <script src="../script.js"></script>
+  </body>
+</html>
