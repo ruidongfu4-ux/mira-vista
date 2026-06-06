@@ -1,0 +1,9 @@
+.git
+.git/**
+.wrangler
+.wrangler/**
+.assetsignore
+.gitignore
+README.md
+.DS_Store
+*.log

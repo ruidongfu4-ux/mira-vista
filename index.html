@@ -3,149 +3,244 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Mira Vista — See clearly, both ways</title>
+    <title>Mira Vista — Two kinds of seeing</title>
     <meta
       name="description"
-      content="Mira Vista is a pair of calm daily apps for two kinds of seeing. Mira turns inward — a mirror for your own thoughts. Vista turns outward — a lens on the world."
+      content="Mira Vista is two small daily apps. Mira looks inward — a mirror for your own thoughts. Vista looks outward — understand the world, one story at a time. Calm, local-first, quiet by design."
     />
-    <meta property="og:title" content="Mira Vista — See clearly, both ways" />
+    <meta name="theme-color" content="#f7f8f0" />
+    <meta property="og:title" content="Mira Vista — Two kinds of seeing" />
     <meta
       property="og:description"
-      content="Two quiet daily apps: Mira (look inward and reflect) and Vista (understand the world). 看清自己，看懂世界."
+      content="Two quiet daily apps. Mira: look back at yourself. Vista: understand the world. 看清自己，看懂世界."
     />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://mira-vista.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <a class="skip-link" href="#apps">Skip to the apps</a>
+
     <header class="site-header" data-header>
       <a class="brand" href="#top" aria-label="Mira Vista home">
         <span class="brand-mark" aria-hidden="true">MV</span>
-        <span>Mira Vista</span>
+        <span class="brand-name">Mira Vista</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="#apps">Apps</a>
-        <a href="#vision">Vision</a>
+        <a href="#principles">Principles</a>
+        <a href="#plans">Plans</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="top">
-      <section class="hero hero--plain" aria-label="Mira Vista introduction">
-        <div class="hero-content">
-          <p class="eyebrow">Two kinds of seeing</p>
-          <h1>See clearly,<br />both ways.</h1>
-          <p class="hero-copy">
-            Mira Vista is a pair of quiet daily apps.
-            <strong>Mira</strong> turns inward — a mirror for your own thoughts.
-            <strong>Vista</strong> turns outward — a lens on the world.
-            Together: 看清自己，看懂世界.
+      <!-- ===== Hero ===== -->
+      <section class="hero" aria-label="Mira Vista introduction">
+        <div class="hero-inner">
+          <p class="eyebrow">Two kinds of seeing · 一内一外</p>
+          <h1>See clearly,<br /><em>both ways.</em></h1>
+          <p class="hero-lead">
+            Mira Vista is two small daily apps. One helps you look back at
+            yourself. One helps you understand the world. Both are calm,
+            local-first, and quiet by design.
           </p>
-          <div class="hero-actions">
-            <a class="button primary" href="#apps">Meet the apps</a>
-            <a class="button secondary" href="#contact">Get updates</a>
+
+          <ul class="hero-duo">
+            <li>
+              <span class="duo-dot duo-dot--mira" aria-hidden="true"></span>
+              <span><strong>Mira</strong> — look back at yourself, every day.</span>
+            </li>
+            <li>
+              <span class="duo-dot duo-dot--vista" aria-hidden="true"></span>
+              <span><strong>Vista</strong> — understand the world, every day.</span>
+            </li>
+          </ul>
+
+          <div class="hero-cta">
+            <a class="button button--mira" href="#mira">
+              Meet Mira <span aria-hidden="true">· 日省</span>
+            </a>
+            <a class="button button--vista" href="#vista">
+              Meet Vista <span aria-hidden="true">· 日知</span>
+            </a>
           </div>
+
+          <p class="hero-zh" lang="zh-Hans">看清自己，看懂世界。</p>
         </div>
       </section>
 
-      <section class="apps" id="apps" aria-label="The apps">
-        <article class="app-card app-card--mira">
-          <img
-            class="app-icon"
-            src="assets/mira-icon.png"
-            alt="Mira app icon"
-            width="88"
-            height="88"
-          />
-          <p class="app-kicker">Look inward</p>
-          <h2>Mira <span>· 日省</span></h2>
-          <p>
-            A reflective companion that asks you better questions and learns who
-            you are over time. Not a feed, not advice — a calm mirror that helps
-            you find yourself in the noise.
-          </p>
-          <p class="app-status">Coming to the App Store</p>
-        </article>
-
-        <article class="app-card app-card--vista">
-          <img
-            class="app-icon"
-            src="assets/vista-icon.png"
-            alt="Vista app icon"
-            width="88"
-            height="88"
-          />
-          <p class="app-kicker">Look outward</p>
-          <h2>Vista <span>· 日知</span></h2>
-          <p>
-            Understand the news that actually matters — what happened, why it
-            matters, and how to think about it. A daily way to train your read
-            on the world.
-          </p>
-          <p class="app-status">Coming soon</p>
-        </article>
-      </section>
-
-      <section class="intro-band" id="vision">
-        <div class="section-kicker">Vision</div>
-        <div class="intro-grid">
-          <h2>Please don't stop thinking.</h2>
-          <p>
-            Most apps want your attention. Mira Vista wants your clarity. Two
-            small daily practices — one turned toward yourself, one toward the
-            world — built to be calm, honest, and easy to keep. No outrage feed,
-            no streak guilt, no noise. Just a clearer view, both ways.
-          </p>
-        </div>
-      </section>
-
-      <section class="contact-section" id="contact">
-        <div>
-          <p class="section-kicker">Contact</p>
-          <h2>Stay in the loop.</h2>
-          <p>
-            Questions, press, or early access — write to
-            <a href="mailto:hello@mira-vista.com">hello@mira-vista.com</a>.
-          </p>
-        </div>
-        <form
-          class="notify-form"
-          action="mailto:hello@mira-vista.com"
-          method="post"
-        >
-          <label for="email">Email address</label>
-          <div class="field-row">
-            <input
-              id="email"
-              name="email"
-              type="email"
-              placeholder="you@example.com"
-              autocomplete="email"
+      <!-- ===== Apps diptych ===== -->
+      <section class="diptych" id="apps" aria-label="The two apps">
+        <article class="panel panel--mira" id="mira">
+          <header class="panel-head">
+            <img
+              class="panel-icon"
+              src="assets/mira-icon.png"
+              alt="Mira app icon"
+              width="76"
+              height="76"
+              loading="lazy"
             />
-            <button type="submit">Notify me</button>
-          </div>
-          <p class="form-note">
-            This opens your email app. A real signup form can be connected later.
+            <div>
+              <p class="panel-kicker">Look inward</p>
+              <h2>Mira <span lang="zh-Hans">日省</span></h2>
+            </div>
+          </header>
+          <p class="panel-lead">
+            A mirror for your own thoughts — not a feed, not advice. Mira asks
+            you better questions and keeps the answers on your phone.
           </p>
-        </form>
+          <p class="panel-for">For people tired of being cheerleaded by their own apps.</p>
+          <ul class="panel-list">
+            <li>Asks sharper questions the longer you use it</li>
+            <li>Quotes you back to yourself, instead of praising you</li>
+            <li>Remembers the promise you made last week</li>
+          </ul>
+          <p class="panel-status">Coming to the App Store</p>
+        </article>
+
+        <article class="panel panel--vista" id="vista">
+          <header class="panel-head">
+            <img
+              class="panel-icon"
+              src="assets/vista-icon.png"
+              alt="Vista app icon"
+              width="76"
+              height="76"
+              loading="lazy"
+            />
+            <div>
+              <p class="panel-kicker">Look outward</p>
+              <h2>Vista <span lang="zh-Hans">日知</span></h2>
+            </div>
+          </header>
+          <p class="panel-lead">
+            Understand the news that actually matters — each story in six parts,
+            then a question back to you. A daily way to train how you read the
+            world.
+          </p>
+          <p class="panel-for">For people tired of doomscrolling headlines.</p>
+          <ul class="panel-list">
+            <li>Six-part analysis, not a hot take</li>
+            <li>Ask anything about a story and follow up</li>
+            <li>Five questions a day — no streak, no guilt</li>
+          </ul>
+          <p class="panel-status">Coming to the App Store</p>
+        </article>
+      </section>
+
+      <!-- ===== Principles ===== -->
+      <section class="principles" id="principles" aria-label="Product principles">
+        <div class="principles-inner">
+          <p class="section-kicker">Principles · 我们的原则</p>
+          <h2>Three things we won't do.</h2>
+          <ol class="principle-list">
+            <li class="principle">
+              <span class="principle-no" aria-hidden="true">01</span>
+              <div>
+                <h3>We won't think for you.</h3>
+                <p>
+                  The apps ask; you answer. No AI verdicts, no “you should,” no
+                  conclusions handed to you.
+                  <span class="principle-zh" lang="zh-Hans">不替你思考。</span>
+                </p>
+              </div>
+            </li>
+            <li class="principle">
+              <span class="principle-no" aria-hidden="true">02</span>
+              <div>
+                <h3>We won't manufacture anxiety.</h3>
+                <p>
+                  No outrage feed. No streak guilt. No red badges screaming for
+                  your attention.
+                  <span class="principle-zh" lang="zh-Hans">不制造焦虑。</span>
+                </p>
+              </div>
+            </li>
+            <li class="principle">
+              <span class="principle-no" aria-hidden="true">03</span>
+              <div>
+                <h3>We won't sell mystical growth.</h3>
+                <p>
+                  No horoscopes, no “unlock your true potential.” Just two honest
+                  tools that respect your time.
+                  <span class="principle-zh" lang="zh-Hans">不卖玄学成长。</span>
+                </p>
+              </div>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- ===== Plans & privacy ===== -->
+      <section class="plans" id="plans" aria-label="Plans and privacy">
+        <div class="plans-inner">
+          <p class="section-kicker">Plans &amp; privacy</p>
+          <h2>Honest by default.</h2>
+          <div class="plans-grid">
+            <div class="plans-block">
+              <h3>Free does real work</h3>
+              <p>
+                Mira’s daily reflection and Vista’s news list are free, forever.
+                You get something useful on day one, with no account required.
+              </p>
+            </div>
+            <div class="plans-block">
+              <h3>Pro, if you want more</h3>
+              <p>
+                $4.99 / month or $39.99 / year, with a 7-day free trial — the
+                same for both apps. Subscriptions are handled by Apple; cancel
+                anytime in your Apple&nbsp;ID. No ads, ever. We never sell your
+                data.
+              </p>
+            </div>
+          </div>
+          <p class="plans-legal">
+            Read the details:
+            <a href="mira/privacy.html">Mira privacy</a> ·
+            <a href="mira/terms.html">Mira terms</a> ·
+            <a href="vista/privacy.html">Vista privacy</a> ·
+            <a href="vista/terms.html">Vista terms</a>
+          </p>
+        </div>
+      </section>
+
+      <!-- ===== Contact ===== -->
+      <section class="contact" id="contact" aria-label="Contact">
+        <div class="contact-inner">
+          <p class="section-kicker">Contact</p>
+          <h2>Say hello.</h2>
+          <p class="contact-copy">
+            Questions, press, or early access — write to
+            <a href="mailto:mira-vista@mira-vista.com">mira-vista@mira-vista.com</a>.
+            One person reads every message.
+          </p>
+          <a class="button button--ink" href="mailto:mira-vista@mira-vista.com">
+            Email us
+          </a>
+        </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <span>Mira Vista</span>
-      <nav class="footer-links" aria-label="Legal">
-        <a href="mira/privacy_en">Mira Privacy</a>
-        <a href="mira/terms_en">Mira Terms</a>
-        <a href="vista/privacy_en">Vista Privacy</a>
-        <a href="vista/terms_en">Vista Terms</a>
+      <div class="footer-brand">
+        <span class="brand-mark" aria-hidden="true">MV</span>
+        <span>Mira Vista</span>
+      </div>
+      <nav class="footer-links" aria-label="Legal and pages">
+        <a href="mira/privacy.html">Mira Privacy</a>
+        <a href="mira/terms.html">Mira Terms</a>
+        <a href="vista/privacy.html">Vista Privacy</a>
+        <a href="vista/terms.html">Vista Terms</a>
       </nav>
-      <span>mira-vista.com · hello@mira-vista.com</span>
+      <span class="footer-meta">mira-vista.com · mira-vista@mira-vista.com</span>
     </footer>
 
     <script src="script.js"></script>

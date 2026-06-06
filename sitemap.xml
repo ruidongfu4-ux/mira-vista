@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://mira-vista.com/</loc>
-  </url>
+  <url><loc>https://mira-vista.com/</loc><lastmod>2026-06-06</lastmod></url>
+  <url><loc>https://mira-vista.com/privacy.html</loc><lastmod>2026-06-06</lastmod></url>
+  <url><loc>https://mira-vista.com/terms.html</loc><lastmod>2026-06-06</lastmod></url>
+  <url><loc>https://mira-vista.com/mira/privacy.html</loc><lastmod>2026-06-06</lastmod></url>
+  <url><loc>https://mira-vista.com/mira/privacy_zh.html</loc><lastmod>2026-06-06</lastmod></url>
+  <url><loc>https://mira-vista.com/mira/terms.html</loc><lastmod>2026-06-06</lastmod></url>
+  <url><loc>https://mira-vista.com/mira/terms_zh.html</loc><lastmod>2026-06-06</lastmod></url>
+  <url><loc>https://mira-vista.com/vista/privacy.html</loc><lastmod>2026-06-06</lastmod></url>
+  <url><loc>https://mira-vista.com/vista/privacy_zh.html</loc><lastmod>2026-06-06</lastmod></url>
+  <url><loc>https://mira-vista.com/vista/terms.html</loc><lastmod>2026-06-06</lastmod></url>
+  <url><loc>https://mira-vista.com/vista/terms_zh.html</loc><lastmod>2026-06-06</lastmod></url>
 </urlset>
