@@ -161,9 +161,11 @@ const I18N = {
   },
 };
 
-const LANG_KEY = "mv-lang";
+// Bumped from "mv-lang" so any value written by the old browser-language
+// auto-detect is ignored — everyone now starts in English by default.
+const LANG_KEY = "mv-lang2";
 
-function applyLang(lang) {
+function applyLang(lang, persist) {
   const dict = I18N[lang] || I18N.en;
   document.documentElement.lang = lang === "zh" ? "zh-Hans" : "en";
   document.documentElement.setAttribute("data-lang", lang);
@@ -190,25 +192,28 @@ function applyLang(lang) {
     );
   }
 
-  try {
-    localStorage.setItem(LANG_KEY, lang);
-  } catch (e) {}
+  // Only remember the language when the user explicitly picks it.
+  if (persist) {
+    try {
+      localStorage.setItem(LANG_KEY, lang);
+    } catch (e) {}
+  }
 }
 
 function initLang() {
+  // Default to English. Only honor a language the user explicitly chose
+  // before (no browser-language sniffing).
   let saved = null;
   try {
     saved = localStorage.getItem(LANG_KEY);
   } catch (e) {}
-  const browserZh =
-    (navigator.language || "").toLowerCase().startsWith("zh");
-  return saved || (browserZh ? "zh" : "en");
+  return saved === "zh" ? "zh" : "en";
 }
 
-applyLang(initLang());
+applyLang(initLang(), false);
 
 document.querySelector("[data-lang-toggle]")?.addEventListener("click", () => {
   const current =
     document.documentElement.getAttribute("data-lang") === "zh" ? "zh" : "en";
-  applyLang(current === "zh" ? "en" : "zh");
+  applyLang(current === "zh" ? "en" : "zh", true);
 });
